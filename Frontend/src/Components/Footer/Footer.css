@@ -1,0 +1,140 @@
+/* Footer Container */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Logo Section */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 50px; /* Adjust size of the logo */
+    height: auto;
+}
+
+.footer-logo p {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Links Section */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    cursor: pointer;
+    color: #555;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-links li:hover {
+    color: #ff7b7b; /* Highlight color on hover */
+}
+
+/* Social Icons Section */
+.footer-social-icon {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icons-container {
+    padding: 10px;
+    border-radius: 50%; /* Circular icons */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-icons-container:hover {
+    transform: scale(1.1); /* Slight enlarge effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Glow effect */
+}
+
+.footer-icons-container img {
+    width: 24px; /* Adjust icon size */
+    height: auto;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #777;
+    font-size: 16px;
+    width: 100%;
+}
+
+.footer-copyright hr {
+    width: 80%;
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-links {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .footer-logo p {
+        font-size: 28px;
+    }
+
+    .footer-copyright {
+        font-size: 14px;
+    }
+
+    .footer-icons-container {
+        padding: 8px;
+    }
+
+    .footer-icons-container img {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer-links {
+        gap: 10px;
+        flex-direction: column; /* Stack links vertically on small screens */
+    }
+
+    .footer-logo p {
+        font-size: 24px;
+    }
+
+    .footer-icons-container {
+        padding: 6px;
+    }
+
+    .footer-icons-container img {
+        width: 18px;
+    }
+
+    .footer-copyright hr {
+        width: 90%;
+    }
+}

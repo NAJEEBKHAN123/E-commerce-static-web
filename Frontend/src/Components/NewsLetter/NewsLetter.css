@@ -1,0 +1,145 @@
+/* Newsletter Section */
+.newsletter {
+    width: 90%; /* Use percentage for better scaling */
+    max-width: 1200px; /* Limit maximum width */
+    height: auto; /* Automatically adjust height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 20px; /* Adjust padding for spacing */
+    margin-bottom: 100px;
+    background: linear-gradient(180deg, #fdefff 0%, #e1ffea22 60%);
+    gap: 20px;
+    border-radius: 10px; /* Add smoother rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and Paragraph */
+.newsletter h1 {
+    color: #454545;
+    font-size: 2rem; /* Use relative units */
+    font-weight: 600;
+    text-align: center; /* Center align for responsiveness */
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #666;
+    font-size: 1rem;
+    text-align: center; /* Center align for smaller screens */
+}
+
+/* Input and Button Container */
+.newsletter div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    width: 100%;
+    max-width: 730px; /* Restrict width */
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #e3e3e3;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+.newsletter input {
+    flex: 1; /* Input takes remaining space */
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+}
+
+.newsletter input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Subscribe Button */
+.newsletter div button {
+    width: 150px;
+    height: 100%; /* Match the container height */
+    background-color: #ff7b7b;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.newsletter div button:hover {
+    background-color: #ff4c4c;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 12px rgba(255, 76, 76, 0.5);
+}
+
+.newsletter div button:active {
+    transform: scale(0.95); /* Shrink slightly on click */
+    box-shadow: none;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .newsletter h1 {
+        font-size: 1.8rem; /* Scale down font size */
+    }
+
+    .newsletter p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    .newsletter div {
+        flex-direction: column; /* Stack input and button */
+        gap: 10px; /* Add spacing between elements */
+        height: auto; /* Adjust height */
+        padding: 10px;
+    }
+
+    .newsletter input {
+        width: 100%; /* Take full width */
+        padding: 12px; /* Adjust padding */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .newsletter div button {
+        width: 100%; /* Full width button */
+        height: auto; /* Adjust height */
+        padding: 12px; /* Add padding for touchscreens */
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .newsletter h1 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .newsletter p {
+        font-size: 0.85rem; /* Adjust paragraph font size */
+    }
+
+    .newsletter div {
+        width: 100%; /* Maximize container width */
+    }
+
+    .newsletter input {
+        font-size: 0.9rem; /* Adjust input font size */
+    }
+
+    .newsletter div button {
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}

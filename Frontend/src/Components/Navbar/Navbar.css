@@ -1,0 +1,246 @@
+/* Global Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px; /* Add padding for spacing */
+    box-shadow: 0px 1px 3px -2px black;
+    background-color: #fff; /* Set navbar background */
+    position: sticky;
+    top: 0; /* Fix navbar at the top */
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* Logo Section */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Menu Section */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items */
+    list-style: none;
+    gap: 30px;
+    color: #626262;
+    font-size: 18px;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+.nav-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack text and <hr> vertically */
+    gap: 5px; /* Space between text and <hr> */
+    cursor: pointer;
+}
+
+.nav-menu li hr {
+    margin: 0; /* Remove default margin */
+    border: none;
+    width: 85%; /* Adjust the width as needed */
+    height: 3px;
+    border-radius: 10px;
+    background-color: #ff4141;
+}
+
+/* Login and Cart Section */
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-login-cart button {
+    padding: 8px 20px; /* Adjust padding for width and height */
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    font-size: 14px; /* Adjust font size */
+    color: #151515;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-login-cart button:hover {
+    background-color: #f3f3f3;
+}
+
+/* Cart Counter */
+.nav-cart-count {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Relative to parent */
+    top: -20px; /* Adjust position */
+    left: -20px; /* Adjust position */
+    border-radius: 50%; /* Make circular */
+    font-size: 12px;
+    background-color: red;
+    color: white;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .nav-logo p {
+        font-size: 24px;
+    }
+
+    .nav-menu {
+        gap: 20px; /* Reduce gap between menu items */
+        font-size: 16px;
+    }
+
+    .nav-login-cart button {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+
+    .nav-cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center all items */
+        padding: 15px;
+    }
+
+    .nav-logo {
+        margin-bottom: 20px; /* Add spacing below the logo */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Stack menu items */
+        align-items: center; /* Center menu items */
+        gap: 15px; /* Adjust gap between items */
+        font-size: 14px;
+        width: 100%; /* Take full width */
+    }
+
+    .nav-login-cart {
+        flex-direction: column; /* Stack login and cart vertically */
+        gap: 15px; /* Adjust spacing */
+        margin-top: 10px; /* Add spacing above */
+    }
+
+    .nav-login-cart button {
+        padding: 8px 20px;
+        font-size: 14px;
+        width: 90%; /* Adjust button width for smaller screens */
+    }
+
+    .nav-cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+}
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Hamburger icon */
+  .hamburger {
+    display: none; /* Hide by default on large screens */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s ease;
+  }
+  
+  /* When the menu is open (X effect) */
+  .line.open:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .line.open:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+  
+  .line.open:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Show hamburger on small screens */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Show hamburger on small screens */
+    }
+  
+    .nav-menu {
+      display: none; /* Hide menu items by default */
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-menu.open {
+      display: block; /* Show the menu when open */
+    }
+  
+    .nav-menu li {
+      margin: 10px 0;
+    }
+  
+    /* Styling for the hr inside the menu */
+    .nav-menu hr {
+      width: 60px; /* Adjust the width to be smaller on mobile */
+      margin: 10px auto;
+      border: 1px solid #ff4141;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-menu hr {
+      width: 20px; /* Further reduce width on very small screens */
+    }
+  }
+  
